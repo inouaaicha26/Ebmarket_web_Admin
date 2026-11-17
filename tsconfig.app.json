@@ -1,26 +1,23 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "es2023",
-    "lib": ["ES2023", "DOM"],
-    "module": "esnext",
-    "types": ["vite/client"],
-    "allowArbitraryExtensions": true,
-    "skipLibCheck": true,
-
-    /* Bundler mode */
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   },
-  "include": ["src"]
+  "include": ["src", "mock/donnees.ts", "mock/traitement.ts", "mock/fetchSimule.ts"]
 }
